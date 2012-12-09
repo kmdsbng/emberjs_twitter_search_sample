@@ -25,7 +25,7 @@ App.tweets = Ember.ArrayController.create({
   update: function(query) {
     var _this;
     _this = this;
-    return searchTweets(query).done(function(tweets) {
+    searchTweets(query).done(function(tweets) {
       _this.get('content').unshiftObjects(tweets);
     });
   }
